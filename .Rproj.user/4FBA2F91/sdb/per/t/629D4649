@@ -1,0 +1,17 @@
+{
+    "contents" : "\nrm(list=ls())\n\n\nlandisInputPath <- \"C:/Users/yonluo/Documents/simulations/boreal plain\"\nmainInputFile <- \"main_input_file_BO_PLAINS.txt\"\nspeciesFile <- \"SpeciesAttributes_LANDIS_II_BO_PLAINS.txt\"\nspeciesEcoregionFile <- \"dynamic_input_BO_PLAINS_LANDIS_II_baseline.txt\"\ninitialCommunitiesFile <- \"BO_PLAINS_species.dat\"\ninitialCommunitiesMapFile <- \"initialCommunitiesMap.tif\"\necoregionFile <- \"landtypes_BP.txt\"\necoregionMapFile <- \"landtypes_BP.tif\"\n\n\n\n\nobjects <- list(\"landisInputPath\" = landisInputPath,\n                \"mainInputFile\" = mainInputFile,\n                \"speciesFile\" = speciesFile,\n                \"speciesEcoregionFile\" = speciesEcoregionFile,\n                \"initialCommunitiesFile\" = initialCommunitiesFile,\n                \"initialCommunitiesMapFile\" = initialCommunitiesMapFile,\n                \"ecoregionFile\" = ecoregionFile,\n                \"ecoregionMapFile\" = ecoregionMapFile)\nparameters <- list(.progress = list(),\n                   .globals = list(),\n                   landisToSpadesTranslator = list())\npath <- list(modulePath=file.path(\"~/GitHub/landisToSpadesTranslator\"),\n             outputPath=\"~/output\")\nmodules <- list(\"landisToSpadesTranslator\")\ntimes <- list(start = 0, end = 1)\nmySim <- simInit(times = times, #params = parameters,\n                 modules = modules, objects = objects, paths = path)\nmySim <- spades(mySim, debug=FALSE)\n",
+    "created" : 1457734536350.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "816390142",
+    "id" : "629D4649",
+    "lastKnownWriteTime" : 1457745239,
+    "path" : "~/GitHub/landisToSpadesTranslator/runing module.R",
+    "project_path" : "runing module.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

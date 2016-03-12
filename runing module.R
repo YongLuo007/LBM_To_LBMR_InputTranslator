@@ -29,6 +29,6 @@ path <- list(modulePath=file.path("~/GitHub/landisToSpadesTranslator"),
              outputPath="~/output")
 modules <- list("landisToSpadesTranslator")
 times <- list(start = 0, end = 1)
-mySim <- simInit(times = times, params = parameters,
+mySim <- simInit(times = times, #params = parameters,
                  modules = modules, objects = objects, paths = path)
 mySim <- spades(mySim, debug=FALSE)
